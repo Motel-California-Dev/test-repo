@@ -7,9 +7,9 @@ const app = express();
 app.get('/', () => {
   db.query('CREATE TABLE IF NOT EXISTS "user"(id SERIAL PRIMARY KEY, name varchar(255))')
     .then(() => {
-      console.log('Good?');
+      console.log('CREATE TABLE query was successful. Woo!');
     }).catch((err) => {
-      console.log("fuck");
+      console.log("fuck.");
       console.log(err);
     });
 });
